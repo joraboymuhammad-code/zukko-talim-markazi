@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>ZUKKO Ta'lim Markazi ("IQTIDORT") — Ilm Kuchda, Zukko Avlod | Created by ETHITH Solutions</title>
+  <meta name="description" content="ZUKKO Ta'lim Markazi va IQTIDORT Iqtidorli Yoshlar Akademiyasi — IELTS 8.5+, SAT 1560+, IT & AI Dasturlash, Prezident Maktablari va Milliy Sertifikat tayyorlov markazi. Created by ETHITH Solutions." />
+
+  <!-- Preload initial video frame for instant zero-latency opening -->
+  <link rel="preload" as="image" href="assets/frames/f_000.webp?cb=zukko_v1" fetchpriority="high" />
+
+  <!-- Premium Geometric & Display Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Premium Open-Source UI/Animation Libraries (GSAP + ScrollTrigger, Vanilla-Tilt 3D Glare, Lucide Icons, Canvas-Confetti) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css?v=zukko_1.0" />
+</head>
+<body>
+
+  <!-- 1. FIXED CRYSTAL-CLEAR 1080P SCROLL-DRIVEN VIDEO STAGE (ZERO BLACK FRAMES) -->
+  <div id="video-stage" aria-hidden="true">
+    <canvas id="scrubber-canvas" width="1600" height="900"></canvas>
+    <div class="ambient-neon-aura"></div>
+  </div>
+
+  <!-- Top Neon Laser Scroll Progress Bar -->
+  <div class="top-scroll-laser" id="top-scroll-laser"></div>
+
+  <!-- 2. FIXED TRANSPARENT NEON NAVIGATION BAR -->
+  <header class="top-nav" id="top-nav">
+    <a href="#hero" class="brand-identity" data-scroll-to="0" aria-label="ZUKKO Ta'lim Markazi Bosh sahifa">
+      <!-- Custom Vector Neon Emblem matching the ZUKKO Building Facade Logo -->
+      <div class="zukko-emblem-box">
+        <svg viewBox="0 0 64 64" class="zukko-logo-svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="zukkoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fde047" />
+              <stop offset="100%" stop-color="#f59e0b" />
+            </linearGradient>
+            <linearGradient id="zukkoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#0284c7" />
+            </linearGradient>
+          </defs>
+          <!-- Split Circle Arc -->
+          <path d="M32 6 A26 26 0 0 0 6 32 A26 26 0 0 0 22 56" fill="none" stroke="url(#zukkoGold)" stroke-width="5.5" stroke-linecap="round" />
+          <path d="M42 8 A26 26 0 0 1 58 32 A26 26 0 0 1 32 58" fill="none" stroke="url(#zukkoBlue)" stroke-width="5.5" stroke-linecap="round" />
+          <!-- Graduation Cap on Top -->
+          <polygon points="32,8 48,15 32,22 16,15" fill="url(#zukkoBlue)" />
+          <path d="M45 16.5 V24" stroke="#fde047" stroke-width="2.5" stroke-linecap="round" />
+          <!-- Bold Stylized Z -->
+          <path d="M20 26 H44 L22 48 H45" fill="none" stroke="url(#zukkoBlue)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M20 26 H44 L22 48 H45" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.65" />
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title-row">
+          <span class="brand-name">ZUKKO</span>
+          <span class="brand-iqtidort-pill">IQTIDORT</span>
+        </div>
+        <span class="brand-sub">TA'LIM MARKAZI • ILM KUCHDA</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Asosiy bo'limlar">
+      <button type="button" class="nav-btn active" data-scroll-to="0">Markaz</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.22">360° Kampus</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.50">"IQTIDORT" & Yo‘nalishlar</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.66">Smart Turniket & ERP</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.77">Grant Kalkulyator</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.87">Natijalar</button>
+      <button type="button" class="nav-btn" data-scroll-to="0.98">Bog‘lanish</button>
+    </nav>
+
+    <div class="nav-right-action">
+      <button type="button" class="nav-cta-btn" id="open-enroll-modal-btn">
+        <i data-lucide="sparkles" class="icon-xs"></i>
+        <span>Kursga Yozilish</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. FIXED 4-DIRECTION "IQTIDORT" & ZUKKO PROGRAMS OVERLAY (Active 31% to 47% Scroll when Drone zooms into ZUKKO & "IQTIDORT" facade) -->
+  <div id="zukko-four-programs-overlay" class="four-pillars-overlay" aria-live="polite">
+    <svg id="program-connectors-svg" class="seed-connectors-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="zgrad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fde047" />
+          <stop offset="100%" stop-color="#00f2fe" />
+        </linearGradient>
+        <linearGradient id="zgrad-2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#00f2fe" />
+          <stop offset="100%" stop-color="#38bdf8" />
+        </linearGradient>
+        <linearGradient id="zgrad-3" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c084fc" />
+          <stop offset="100%" stop-color="#00f2fe" />
+        </linearGradient>
+        <linearGradient id="zgrad-4" x1="100%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stop-color="#34d399" />
+          <stop offset="100%" stop-color="#fde047" />
+        </linearGradient>
+        <filter id="zukko-neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur stdDeviation="3.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- Connector 1: Top-Left Card -> ZUKKO Roof Emblem -->
+      <g id="hud-line-1" class="hud-connector">
+        <polyline id="poly-1" points="410,230 510,230 915,195" fill="none" stroke="url(#zgrad-1)" stroke-width="2.4" filter="url(#zukko-neon-glow)" stroke-dasharray="7 4" />
+        <circle id="target-ring-1" cx="915" cy="195" r="22" fill="none" stroke="#fde047" stroke-width="2.2" filter="url(#zukko-neon-glow)" />
+        <circle id="target-dot-1" cx="915" cy="195" r="5.5" fill="#fde047" />
+      </g>
+
+      <!-- Connector 2: Top-Right Card -> Right Wing Smart Classrooms -->
+      <g id="hud-line-2" class="hud-connector">
+        <polyline id="poly-2" points="1510,230 1410,230 1280,320" fill="none" stroke="url(#zgrad-2)" stroke-width="2.4" filter="url(#zukko-neon-glow)" stroke-dasharray="7 4" />
+        <circle id="target-ring-2" cx="1280" cy="320" r="22" fill="none" stroke="#00f2fe" stroke-width="2.2" filter="url(#zukko-neon-glow)" />
+        <circle id="target-dot-2" cx="1280" cy="320" r="5.5" fill="#00f2fe" />
+      </g>
+
+      <!-- Connector 3: Bottom-Left Card -> "IQTIDORT" Main Golden Entrance -->
+      <g id="hud-line-3" class="hud-connector">
+        <polyline id="poly-3" points="410,820 530,820 945,515" fill="none" stroke="url(#zgrad-3)" stroke-width="2.4" filter="url(#zukko-neon-glow)" stroke-dasharray="7 4" />
+        <circle id="target-ring-3" cx="945" cy="515" r="24" fill="none" stroke="#c084fc" stroke-width="2.2" filter="url(#zukko-neon-glow)" />
+        <circle id="target-dot-3" cx="945" cy="515" r="6" fill="#c084fc" />
+      </g>
+
+      <!-- Connector 4: Bottom-Right Card -> Science & IT Wing -->
+      <g id="hud-line-4" class="hud-connector">
+        <polyline id="poly-4" points="1510,820 1410,820 1260,565" fill="none" stroke="url(#zgrad-4)" stroke-width="2.4" filter="url(#zukko-neon-glow)" stroke-dasharray="7 4" />
+        <circle id="target-ring-4" cx="1260" cy="565" r="22" fill="none" stroke="#34d399" stroke-width="2.2" filter="url(#zukko-neon-glow)" />
+        <circle id="target-dot-4" cx="1260" cy="565" r="5.5" fill="#34d399" />
+      </g>
+    </svg>
+
+    <!-- PROGRAM 1: TOP-LEFT ("IQTIDORT" OLIMPIADA VA PREZIDENT MAKTABLARI) -->
+    <article class="pillar-card pillar-tl" id="pillar-card-iqtidort" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.15">
+      <div class="pillar-header">
+        <span class="pillar-badge badge-gold"><i data-lucide="crown" class="icon-inline"></i> "IQTIDORT" MAXSUS YO‘NALISHI</span>
+      </div>
+      <h3 class="pillar-title title-gold-neon">"IQTIDORT" Olimpiada & Grant</h3>
+      <p class="pillar-desc">
+        Binoning asosiy kirish peshtoqida porlab turgan <strong>"IQTIDORT"</strong> — eng salohiyatli o‘quvchilarni saralab olib, xalqaro darajaga olib chiquvchi elita dasturi:
+      </p>
+      <div class="pillar-sublist">
+        <div class="psub-row"><strong>Prezident va Ixtisoslashgan Maktablar:</strong> <span>Al-Xorazmiy, Mirzo Ulug‘bek va Prezident maktablariga <em>98% kirish ko‘rsatkichi</em>.</span></div>
+        <div class="psub-row"><strong>Xalqaro Fan Olimpiadalari:</strong> <span>Matematika, Fizika, Kimyo va Informatika bo‘yicha <em>100% gacha IQTIDORT Granti</em>.</span></div>
+        <div class="psub-row"><strong>Stipendiyali Ta’lim:</strong> <span>Har oy eng yuqori ball to‘plagan "IQTIDORT" o‘quvchilariga maxsus <em>pul mukofotlari va vaucherlar</em>.</span></div>
+      </div>
+    </article>
+
+    <!-- PROGRAM 2: TOP-RIGHT (IELTS 8.5+ & SAT 1550+ INTERNATIONAL) -->
+    <article class="pillar-card pillar-tr" id="pillar-card-ielts" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.15">
+      <div class="pillar-header">
+        <span class="pillar-badge badge-cyan"><i data-lucide="globe-2" class="icon-inline"></i> GLOBAL ENGLISH & SAT</span>
+      </div>
+      <h3 class="pillar-title title-cyan-neon">IELTS 8.5+ va SAT 1560+</h3>
+      <p class="pillar-desc">
+        General English’dan tortib, dunyoning <strong>Top-100 universitetlariga 100% grant</strong> yutish darajasigacha bo‘lgan intensiv til va akademik dasturlar:
+      </p>
+      <div class="pillar-sublist">
+        <div class="psub-row"><strong>CD-IELTS Mock Exam Center:</strong> <span>Har yakshanba haqiqiy imtihon muhitida <em>kompyuterlashgan IELTS simulyatori</em> va Speaking Club.</span></div>
+        <div class="psub-row"><strong>CELTA & C2 Ustozlar Jamoasi:</strong> <span>IELTS 8.0–8.5 sohiblari hamda ikkinchi ustoz (Academic Support) tizimi.</span></div>
+        <div class="psub-row"><strong>SAT Math & Verbal (1500+):</strong> <span>AQSh, Yevropa, Janubiy Koreya va xalqaro universitetlarga <em>Full-Ride Grant</em> mentorligi.</span></div>
+      </div>
+    </article>
+
+    <!-- PROGRAM 3: BOTTOM-LEFT (ZUKKO IT, AI & ZAMONAVIY KASBLAR) -->
+    <article class="pillar-card pillar-bl" id="pillar-card-it" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.15">
+      <div class="pillar-header">
+        <span class="pillar-badge badge-purple"><i data-lucide="cpu" class="icon-inline"></i> IT, AI & MODERN TECH</span>
+      </div>
+      <h3 class="pillar-title title-purple-neon">ZUKKO IT va Sun’iy Intellekt</h3>
+      <p class="pillar-desc">
+        <strong>"Ilm — Kuchda, Zukko Avlod"</strong> shiori ostida zamonaviy noutbuklar bilan jihozlangan IT laboratoriyalarida amaliy dasturlash:
+      </p>
+      <div class="pillar-sublist">
+        <div class="psub-row"><strong>Full-Stack & Mobile Dasturlash:</strong> <span><em>Python, JavaScript, React, Next.js, Node.js</em> va Flutter amaliy loyihalar asosida.</span></div>
+        <div class="psub-row"><strong>Sun’iy Intellekt & 3D Dizayn:</strong> <span>AI Prompt Engineering, Grafik dizayn, Motion, Blender 3D va Kiberxavfsizlik.</span></div>
+        <div class="psub-row"><strong>Kafolatlangan Portfolio & Freelance:</strong> <span>Kurs davomida haqiqiy startap loyihalar yaratish va xalqaro IT-kompaniyalarga tayyorlov.</span></div>
+      </div>
+    </article>
+
+    <!-- PROGRAM 4: BOTTOM-RIGHT (MILLIY SERTIFIKAT A+ & DTM FUNDAMENTAL FANLAR) -->
+    <article class="pillar-card pillar-br" id="pillar-card-science" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.15">
+      <div class="pillar-header">
+        <span class="pillar-badge badge-emerald"><i data-lucide="award" class="icon-inline"></i> MILLIY SERTIFIKAT A+</span>
+      </div>
+      <h3 class="pillar-title title-emerald-neon">Aniq va Tabiiy Fanlar (DTM)</h3>
+      <p class="pillar-desc">
+        Davlat oliygohlari, Tibbiyot akademiyalari va Texnika universitetlariga muddatidan oldin <strong>maksimal 189.0 ball</strong> kafolati:
+      </p>
+      <div class="pillar-sublist">
+        <div class="psub-row"><strong>Matematika, Fizika va Informatika:</strong> <span>Milliy sertifikatda <em>A va A+ daraja</em> olib, imtihonsiz 100% ballni naqd qilish.</span></div>
+        <div class="psub-row"><strong>Kimyo va Biologiya (Med-Track):</strong> <span>Bo‘lajak shifokorlar uchun chuqurlashtirilgan laboratoriya va test-tahlil darslari.</span></div>
+        <div class="psub-row"><strong>Ona Tili, Adabiyot va Tarix:</strong> <span>Yuridik, Diplomatiya va Gumanitar yo‘nalishlar uchun mukammal blok tayyorlov.</span></div>
+      </div>
+    </article>
+  </div>
+
+  <!-- 4. MAIN SCROLLABLE STORY CONTAINER -->
+  <main id="scroll-container" class="scroll-container">
+
+    <!-- CHAPTER 1: HERO — ZUKKO TA'LIM MARKAZI & "IQTIDORT" (0% - 15% Scroll | Drone High View of ZUKKO Building) -->
+    <section class="story-section section-hero" id="hero">
+      <div class="hero-flank-grid">
+        <!-- Left Transparent Neon Hero Panel -->
+        <div class="hero-panel neon-glass-card neon-border-cyan" data-tilt data-tilt-max="3" data-tilt-glare data-tilt-max-glare="0.14">
+          <div class="iqtidort-top-banner">
+            <span class="live-dot-gold"></span>
+            <span>ASOSIY KIRISH QISMIDA: <strong>"IQTIDORT"</strong> AKADEMIYASI</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-title-zukko">ZUKKO</span>
+            <span class="hero-title-center">TA’LIM MARKAZI</span>
+          </h1>
+
+          <div class="motto-ribbon">
+            <i data-lucide="zap" class="icon-sm text-gold"></i>
+            <span>ILM — KUCHDA • ZUKKO AVLOD EKOTIZIMI</span>
+          </div>
+
+          <p class="hero-lead">
+            <strong>ZUKKO Ta’lim Markazi</strong> va uning <strong>"IQTIDORT"</strong> iqtidorli yoshlar majmuasi — zamonaviy 3 qavatli innovatsion kampus, Face-ID xavfsizlik tizimi, 4K interaktiv smart-auditoriyalar hamda xalqaro darajadagi ustozlarni birlashtirgan kelajak ta’lim markazidir.
+          </p>
+
+          <p class="hero-sublead">
+            Sichqonchani pastga aylantiring — dron parvozi orqali <span class="text-glow-gold">"IQTIDORT"</span> kirish portalidan binoning ichki smart-xonalarigacha vizual sayohat qiling!
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-neon-primary" data-scroll-to="0.50">
+              <span>"IQTIDORT" Yo‘nalishlari</span>
+              <i data-lucide="arrow-down-right" class="icon-sm"></i>
+            </button>
+            <button type="button" class="btn-neon-gold" id="hero-enroll-btn">
+              <i data-lucide="user-plus" class="icon-sm"></i>
+              <span>Bepul Sinov Darsi</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Transparent Neon Live Telemetry & Stats Panel -->
+        <div class="hero-stats-panel neon-glass-card neon-border-gold" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <div class="stats-panel-header">
+            <span class="section-tag tag-gold"><i data-lucide="award" class="icon-inline"></i> ZUKKO & IQTIDORT KO‘RSATKICHLARI</span>
+            <h2 class="stats-panel-title">Raqamlarda Isbotlangan Sifat</h2>
+          </div>
+
+          <div class="hero-kpi-grid">
+            <div class="kpi-box">
+              <span class="kpi-num text-glow-cyan">2,850+</span>
+              <span class="kpi-label">Faol Zukko O‘quvchilari</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num text-glow-gold">96.4%</span>
+              <span class="kpi-label">OTM va Xalqaro Grant</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num text-glow-purple">8.5 / 1560</span>
+              <span class="kpi-label">IELTS & SAT Rekordlar</span>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-num text-glow-emerald">45+</span>
+              <span class="kpi-label">Smart-Xonalar va IT Lab</span>
+            </div>
+          </div>
+
+          <div class="iqtidort-feature-strip">
+            <div class="strip-icon"><i data-lucide="shield-check" class="icon-md text-gold"></i></div>
+            <div class="strip-text">
+              <strong>"IQTIDORT" 100% Grant Dasturi</strong>
+              <span>Saralash imtihonidan yuqori ball to‘plagan o‘quvchilar bepul o‘qiydi va oylik stipendiya oladi!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2: 360° SMART CAMPUS & ARCHITECTURE (15% - 31% Scroll | Drone 360° Orbit Around Campus & Green Courtyard) -->
+    <section class="story-section section-flanks" id="campus">
+      <div class="flank-wrapper">
+        <div class="flank-card neon-glass-card neon-border-cyan" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag"><i data-lucide="building-2" class="icon-inline"></i> 360° INNOVATSION ARXITEKTURA</span>
+          <h2 class="neon-heading">3 Qavatli Zamonaviy Ta’lim Kampusi</h2>
+          <p>
+            Orqa fondagi videoda ko‘rib turganingizdek, <strong>ZUKKO Ta’lim Markazi</strong> maxsus loyiha asosida qurilgan mustaqil, keng va yorug‘ 3 qavatli o‘quv majmuasida joylashgan.
+          </p>
+          <p>
+            Har bir qavat <span class="text-glow-cyan">panoramali oynavand devorlar</span>, shovqin yutuvchi akustik tizim, markazlashgan mikroiqlim (Chiller) hamda interaktiv 4K sensorli panellar bilan to‘liq jihozlangan.
+          </p>
+          <div class="feature-pills-row">
+            <span class="fpill">45+ Smart Xona</span>
+            <span class="fpill">24/7 Co-Working</span>
+            <span class="fpill">Wi-Fi 6 Campus</span>
+          </div>
+        </div>
+
+        <div class="flank-card neon-glass-card neon-border-emerald" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag tag-emerald"><i data-lucide="trees" class="icon-inline"></i> ECO-HOVLI VA XAVFSIZ HUDUD</span>
+          <h3 class="neon-heading">Yashil Kampus va Dam Olish Zonalari</h3>
+          <p>
+            Darslar oralig‘ida o‘quvchilar toza havoda dam olishlari va suhbatlashishlari uchun binoning old va orqa qismida <span class="text-glow-emerald">yashil maysazorlar, archalar va qulay o‘rindiqlar (Eco-Courtyard)</span> tashkil etilgan.
+          </p>
+          <p>
+            Markaz hududi to‘liq o‘ralgan bo‘lib, <strong>64 ta HD kuzatuv kameralari</strong>, keng avtoturargoh hamda pandusli qulay kirish yo‘laklari bilan ta’minlangan.
+          </p>
+          <div class="feature-pills-row">
+            <span class="fpill fpill-emerald">Eco-Courtyard</span>
+            <span class="fpill fpill-emerald">Book Cafe & Kutubxona</span>
+            <span class="fpill fpill-emerald">Xavfsiz Hudud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3: DEDICATED SCROLL RUNWAY FOR THE 4 "IQTIDORT" & ZUKKO PROGRAMS OVERLAY (31% - 48% Scroll | Zoom into "IQTIDORT" Entrance) -->
+    <section class="story-section section-programs-runway" id="programs-runway" aria-label="ZUKKO va IQTIDORT 4 Asosiy Yo'nalishi">
+      <div class="runway-step" data-program="all"></div>
+      <div class="runway-step" data-program="iqtidort"></div>
+      <div class="runway-step" data-program="ielts"></div>
+      <div class="runway-step" data-program="it"></div>
+      <div class="runway-step" data-program="science"></div>
+    </section>
+
+    <!-- CHAPTER 4: RECEPTION, FACE-ID TURNSTILES & ZUKKO ERP (48% - 64% Scroll | Inside Lobby with ZUKKO Logo & Turnstiles) -->
+    <section class="story-section section-flanks" id="turniket">
+      <div class="flank-wrapper">
+        <div class="flank-card neon-glass-card neon-border-gold" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag tag-gold"><i data-lucide="scan-face" class="icon-inline"></i> SMART RECEPTION & FACE-ID TURNIKET</span>
+          <h2 class="neon-heading">Ota-Onalar Uchun 100% Avto-SMS Nazorat</h2>
+          <p>
+            Binoga kirishingiz bilan zamonaviy <strong>Reception</strong> va avtomatlashtirilgan <strong>Face-ID / ID-karta elektron turniketlari</strong> sizni kutib oladi.
+          </p>
+          <div class="mini-pillar-list">
+            <div class="mini-pillar-item">
+              <span class="dot-gold"></span>
+              <div>
+                <strong class="text-glow-gold">Lahzali SMS va Telegram Xabarnoma</strong>
+                <small>Farzandingiz markazga kirgan va darsdan chiqqan daqiqada telefoningizga aniq vaqt bilan SMS-hisobot boradi.</small>
+              </div>
+            </div>
+            <div class="mini-pillar-item">
+              <span class="dot-cyan"></span>
+              <div>
+                <strong class="text-glow-cyan">Shaxsiy O‘quvchi va Ota-Ona Kabineti</strong>
+                <small>Har bir darsdagi baholar, uy vazifalari va haftalik Mock-test tahlillari onlayn grafikda ko‘rinadi.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flank-card neon-glass-card neon-border-purple" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag tag-purple"><i data-lucide="coins" class="icon-inline"></i> GAMIFIKATSIYA VA MOTIVATSIYA</span>
+          <h3 class="neon-heading">"Zukko Coin" va Smart ERP Ekotizimi</h3>
+          <p>
+            <strong>ZUKKO Ta’lim Markazi</strong>da o‘qish hech qachon zerikarli bo‘lmaydi — bizda bilim bevosita rag‘batlantiriladi:
+          </p>
+          <div class="mini-pillar-list">
+            <div class="mini-pillar-item">
+              <span class="dot-purple"></span>
+              <div>
+                <strong class="text-glow-purple">"Zukko Coin" Marketi</strong>
+                <small>Darslarga kechikmay kelgan va yuqori ball olgan o‘quvchilar Zukko Coin yig‘ib, ularni MacBook, iPad, iPhone, AirPods va kurs vaucherlariga almashtiradi!</small>
+              </div>
+            </div>
+            <div class="mini-pillar-item">
+              <span class="dot-emerald"></span>
+              <div>
+                <strong class="text-glow-emerald">Ikkinchi Ustoz (Support Teacher) Tizimi</strong>
+                <small>Asosiy darsdan tashqari qiyin mavzularni o‘zlashtirish uchun har kuni bepul individual Support Teacher ko‘magi.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 5: INTERACTIVE COURSE EXPLORER & "IQTIDORT" GRANT CALCULATOR (64% - 80% Scroll | "ILM - KUCHDA / ZUKKO AVLOD" Classrooms) -->
+    <section class="story-section section-interactive-hub" id="calculator">
+      <div class="flank-wrapper">
+        <!-- Left Interactive Course Tabs Widget -->
+        <div class="flank-card wide-interactive-card neon-glass-card neon-border-cyan">
+          <span class="section-tag"><i data-lucide="book-open-check" class="icon-inline"></i> ILM — KUCHDA • ZUKKO AVLOD</span>
+          <h2 class="neon-heading">Interaktiv Kurslar Katalogi</h2>
+
+          <div class="course-tabs-bar" role="tablist">
+            <button type="button" class="ctab-btn active" data-course="ielts">IELTS & SAT</button>
+            <button type="button" class="ctab-btn" data-course="iqtidort">IQTIDORT Olimpiada</button>
+            <button type="button" class="ctab-btn" data-course="it">IT & AI Dasturlash</button>
+            <button type="button" class="ctab-btn" data-course="dtm">Milliy Sertifikat A+</button>
+          </div>
+
+          <div class="course-tab-content" id="course-tab-display">
+            <div class="ctab-header">
+              <h3 id="ctab-title" class="text-glow-cyan">IELTS 7.5–8.5+ & SAT 1500+ Intensive</h3>
+              <span id="ctab-badge" class="pillar-badge badge-cyan">HAFTASIGA 6 KUN • +SUPPORT USTOZ</span>
+            </div>
+            <p id="ctab-desc">
+              Xalqaro CELTA sertifikatli va IELTS 8.5 natijaga ega mentorlar bilan General English’dan Academic IELTS va SAT Math/Verbal bosqichigacha tizimli tayyorlov. Har yakshanba bepul CD-IELTS Mock imtihoni!
+            </p>
+            <div class="ctab-metrics">
+              <div class="cmetric">
+                <span class="cm-label">Davomiyligi</span>
+                <strong id="ctab-duration">3 – 6 Oy (Bosqichma-bosqich)</strong>
+              </div>
+              <div class="cmetric">
+                <span class="cm-label">Guruh hajmi</span>
+                <strong id="ctab-size">12–14 nafar o‘quvchi (Smart Xona)</strong>
+              </div>
+              <div class="cmetric">
+                <span class="cm-label">Kafolat</span>
+                <strong id="ctab-guarantee" class="text-glow-gold">Shartnoma asosida +1.5–2.0 Band o‘sish</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive "IQTIDORT" Grant & Stipendiya Calculator -->
+        <div class="flank-card wide-interactive-card neon-glass-card neon-border-gold">
+          <span class="section-tag tag-gold"><i data-lucide="calculator" class="icon-inline"></i> INTERAKTIV GRANT KALKULYATORI</span>
+          <h3 class="neon-heading">"IQTIDORT" Granti va Chegirmani Hisoblang</h3>
+          <p>
+            ZUKKO Ta’lim Markazining saralash testida to‘plagan ballingizga qarab <strong>"IQTIDORT" granti</strong> va oylik stipendiyangizni hoziroq tekshirib ko‘ring:
+          </p>
+
+          <div class="grant-calc-box">
+            <div class="calc-slider-header">
+              <span>Saralash Imtihoni Natijangiz:</span>
+              <strong id="grant-score-val" class="text-glow-gold">88 / 100 Ball</strong>
+            </div>
+            <input type="range" id="grant-score-slider" class="neon-range-slider" min="40" max="100" value="88" />
+            <div class="calc-scale-labels">
+              <span>40 ball</span>
+              <span>65 ball</span>
+              <span>85 ball</span>
+              <span>100 ball</span>
+            </div>
+
+            <div class="grant-result-panel" id="grant-result-panel">
+              <div class="gres-col">
+                <span class="gres-label">Sizning Grant Darajangiz</span>
+                <strong id="grant-tier-name" class="text-glow-cyan">IQTIDORT GOLD GRANTI</strong>
+              </div>
+              <div class="gres-col">
+                <span class="gres-label">To‘lov Chegirmasi</span>
+                <strong id="grant-discount-val" class="text-glow-gold">50% CHEGIRMA + 250 Zukko Coin</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn-neon-gold full-width-btn" id="claim-grant-btn">
+              <i data-lucide="gift" class="icon-sm"></i>
+              <span>Shu Grant Uchun Sinov Testiga Yozilish</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 6: HALL OF FAME RESULTS & MENTORS (80% - 91% Scroll | Smart Classroom with Teacher at 4K Interactive Board) -->
+    <section class="story-section section-flanks" id="results">
+      <div class="flank-wrapper">
+        <div class="flank-card neon-glass-card neon-border-purple" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag tag-purple"><i data-lucide="trophy" class="icon-inline"></i> ZUKKO AVLOD FAXRI (HALL OF FAME)</span>
+          <h2 class="neon-heading">O‘quvchilarimizning Rekord Natijalari</h2>
+          <div class="hall-of-fame-list">
+            <div class="hof-item">
+              <span class="hof-score badge-gold">IELTS 8.5</span>
+              <div class="hof-info">
+                <strong>Abduqodirov Javohir • SAT 1550</strong>
+                <small>KAIST va AQSh Top-50 universiteti 100% Full-Ride Grant sohibi</small>
+              </div>
+            </div>
+            <div class="hof-item">
+              <span class="hof-score badge-cyan">189.0 BALL</span>
+              <div class="hof-info">
+                <strong>Mahmudova Dilnoza • Milliy Sertifikat A+</strong>
+                <small>Matematika, Fizika va Ingliz tilidan muddatidan oldin 100% natija</small>
+              </div>
+            </div>
+            <div class="hof-item">
+              <span class="hof-score badge-emerald">1-O‘RIN</span>
+              <div class="hof-info">
+                <strong>"IQTIDORT" Olimpiada Jamoasi (42 nafar)</strong>
+                <small>Prezident va Al-Xorazmiy maktablari imtihonlarida viloyat rekordi</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flank-card neon-glass-card neon-border-cyan" data-tilt data-tilt-max="4" data-tilt-glare data-tilt-max-glare="0.14">
+          <span class="section-tag"><i data-lucide="graduation-cap" class="icon-inline"></i> SMART AUDITORIYALAR VA USTOZLAR</span>
+          <h3 class="neon-heading">4K Interaktiv Doskalar va Noutbukli Darslar</h3>
+          <p>
+            Videodagi o‘quv xonasida ko‘rib turganingizdek, har bir o‘quvchi zamonaviy kompyuterlar, qulay ortopedik partalar hamda katta <strong>4K interaktiv sensorli ekranlar</strong> yordamida ta’lim oladi.
+          </p>
+          <p>
+            Ustozlarimizning barchasi kamida <strong>5+ yillik tajriba</strong>, xalqaro <strong>IELTS 8.0–8.5 / CELTA</strong>, <strong>Senior Software Engineer</strong> yoki fan olimpiadalari g‘olibi maqomiga ega.
+          </p>
+          <div class="feature-pills-row">
+            <span class="fpill">50+ Ekspert Ustozlar</span>
+            <span class="fpill">Haftalik Mock-Testlar</span>
+            <span class="fpill">100% Shartnomaviy Kafolat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 7: CONTACT, NEW GMAILS, INLINE ENROLLMENT & ETHITH SOLUTIONS CREDIT (91% - 100% Scroll | Bright Sunlit Classroom) -->
+    <section class="story-section section-contact" id="contact">
+      <div class="contact-shell neon-glass-card neon-border-cyan">
+        <div class="contact-top-split">
+          <!-- Left: Contact Details & New Gmails -->
+          <div class="contact-info-col">
+            <span class="section-tag tag-gold"><i data-lucide="phone-call" class="icon-inline"></i> ZUKKO TA’LIM MARKAZI • "IQTIDORT" QABUL KOMISSIYASI</span>
+            <h2 class="contact-title neon-heading">Biz Bilan Bog‘laning va Zukko Avlodga Qo‘shiling!</h2>
+            <p class="contact-sub">
+              Bepul daraja aniqlash testi, <span class="text-glow-gold">"IQTIDORT" granti</span> yoki kurslarimizga yozilish uchun rasmiy aloqa tarmoqlarimiz:
+            </p>
+
+            <div class="contact-cards-grid">
+              <div class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-type">QABUL MARKAZI #1</span>
+                  <button type="button" class="copy-btn" data-copy="+998 99 503 96 21">Nusxalash</button>
+                </div>
+                <a href="tel:+998995039621" class="contact-value">+998 99 503 96 21</a>
+                <span class="contact-note">Qo‘ng‘iroq va Telegram 24/7</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-type">QABUL MARKAZI #2</span>
+                  <button type="button" class="copy-btn" data-copy="+998 95 007 96 21">Nusxalash</button>
+                </div>
+                <a href="tel:+998950079621" class="contact-value">+998 95 007 96 21</a>
+                <span class="contact-note">"IQTIDORT" va O‘quv Bo‘limi</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-type">RASMIY GMAIL #1</span>
+                  <button type="button" class="copy-btn" data-copy="zukkotalimmarkazi@gmail.com">Nusxalash</button>
+                </div>
+                <a href="mailto:zukkotalimmarkazi@gmail.com" class="contact-value contact-email">zukkotalimmarkazi@gmail.com</a>
+                <span class="contact-note">ZUKKO Ta’lim Markazi Asosiy Pochta</span>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-top">
+                  <span class="contact-type">"IQTIDORT" GMAIL #2</span>
+                  <button type="button" class="copy-btn" data-copy="iqtidort.zukko@gmail.com">Nusxalash</button>
+                </div>
+                <a href="mailto:iqtidort.zukko@gmail.com" class="contact-value contact-email">iqtidort.zukko@gmail.com</a>
+                <span class="contact-note">Grantlar, Olimpiada va Hamkorlik</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Instant Online Registration Form -->
+          <div class="contact-form-col">
+            <h3 class="form-box-title"><i data-lucide="sparkles" class="icon-sm text-gold"></i> Bepul Sinov Darsiga Onlayn Yozilish</h3>
+            <form id="inline-enroll-form" class="neon-enroll-form">
+              <div class="form-row">
+                <input type="text" id="enroll-name" class="neon-input" placeholder="Ism va familiyangiz..." required />
+              </div>
+              <div class="form-row">
+                <input type="tel" id="enroll-phone" class="neon-input" placeholder="Telefon raqamingiz (+998 ...)" required />
+              </div>
+              <div class="form-row">
+                <select id="enroll-course" class="neon-input neon-select">
+                  <option value="IQTIDORT Olimpiada & Prezident Maktabi">"IQTIDORT" — Prezident Maktabi & Olimpiada</option>
+                  <option value="IELTS 8.5+ & General English">IELTS 8.5+ & General English</option>
+                  <option value="SAT 1550+ & Xalqaro Grantlar">SAT 1550+ & Xalqaro Universitet Grantlari</option>
+                  <option value="ZUKKO IT, AI & Dasturlash">ZUKKO IT, AI & Full-Stack Dasturlash</option>
+                  <option value="Milliy Sertifikat A+ (Matematika/Fizika/Kimyo)">Milliy Sertifikat A+ (Matematika / Fizika / Kimyo)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-neon-primary full-width-btn">
+                <span>Arizani Yuborish va 1-Darsni Bepul Olish</span>
+                <i data-lucide="send" class="icon-sm"></i>
+              </button>
+              <p id="inline-form-status" class="form-status-msg" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-divider"></div>
+          <div class="footer-bottom-row">
+            <div class="footer-brand-line">
+              <span class="footer-zukko-badge">ZUKKO</span>
+              <span><strong>ZUKKO TA’LIM MARKAZI ("IQTIDORT")</strong> • Ilm — Kuchda • Zukko Avlod</span>
+            </div>
+
+            <!-- Required English Credit for ETHITH Solutions -->
+            <div class="creator-signature" id="ethith-solutions-credit">
+              <span class="signature-dot"></span>
+              <p class="signature-text">This website was created by <strong>ETHITH Solutions</strong></p>
+            </div>
+
+            <button type="button" class="back-to-top-btn" data-scroll-to="0">
+              <span>Yuqoriga Qaytish</span>
+              <i data-lucide="arrow-up" class="icon-xs"></i>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. INTERACTIVE MODAL FOR COURSE REGISTRATION -->
+  <div id="enroll-modal" class="enroll-modal-backdrop" aria-hidden="true">
+    <div class="enroll-modal-card neon-glass-card neon-border-gold">
+      <button type="button" class="modal-close-btn" id="close-enroll-modal-btn" aria-label="Yopish">&times;</button>
+      <span class="section-tag tag-gold">ZUKKO TA'LIM MARKAZI • "IQTIDORT"</span>
+      <h3 class="neon-heading modal-title">Bepul Sinov Darsi va Grant Imtihoniga Ro‘yxatdan O‘tish</h3>
+      <p class="modal-sub">Ma’lumotlaringizni qoldiring — qabul menejerlarimiz 10 daqiqa ichida siz bilan bog‘lanib, bepul daraja aniqlash testiga taklif qiladi!</p>
+      <form id="modal-enroll-form" class="neon-enroll-form">
+        <input type="text" id="modal-name" class="neon-input" placeholder="Ism va familiyangiz..." required />
+        <input type="tel" id="modal-phone" class="neon-input" placeholder="Telefon raqamingiz (+998 90 123 45 67)" required />
+        <select id="modal-course" class="neon-input neon-select">
+          <option value="IQTIDORT Grant va Olimpiada">"IQTIDORT" — 100% Grant va Olimpiada Dasturi</option>
+          <option value="IELTS 8.5+ va SAT 1550+">IELTS 8.5+ va SAT 1550+ Xalqaro Dasturi</option>
+          <option value="IT, Sun'iy Intellekt va Dasturlash">ZUKKO IT, Sun’iy Intellekt va Dasturlash</option>
+          <option value="Milliy Sertifikat A+ va DTM">Milliy Sertifikat A+ (Matematika, Fizika, Kimyo, Biologiya)</option>
+        </select>
+        <button type="submit" class="btn-neon-gold full-width-btn">
+          <span>Joyni Band Qilish</span>
+        </button>
+        <p id="modal-form-status" class="form-status-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js?v=zukko_1.0"></script>
+</body>
+</html>
